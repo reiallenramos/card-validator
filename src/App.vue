@@ -30,7 +30,8 @@
                           img(src="./assets/maestro.png").card#maestro
             v-col.col-12
               luhn-formula(:num="cardNumber")
-    v-btn(fixed dark bottom right fab color="indigo")
+    modal(:dialog="dialog" @handleCloseDialog="closeDialog")
+    v-btn(fixed dark bottom right fab color="green" @click="dialog = true")
       v-icon mdi-help
 </template>
 
@@ -40,6 +41,7 @@ import Vue from 'vue'
 import VueMask from 'v-mask'
 import Isotope from 'isotope-layout'
 import LuhnFormula from './components/LuhnFormula'
+import Modal from './components/Modal'
 
 Vue.use(VueMask)
 
@@ -51,13 +53,15 @@ export default {
       rules: [
         value => !!value || 'Required',
         () => this.result.isValid || 'Invalid',
-      ]
+      ],
+      dialog: false
     }
   },
   components: {
     CardValidator,
     VueMask,
     LuhnFormula,
+    Modal,
   },
   computed: {
     result: function () {
@@ -92,6 +96,9 @@ export default {
         filter = `#${type}`
       }
       this.iso.arrange({ filter })
+    },
+    closeDialog() {
+      this.dialog = false
     }
   }
 }
