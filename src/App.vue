@@ -6,8 +6,8 @@
           v-row
             v-col.col-12
               v-row
-                v-col(cols="12").py-7.col-xs-12.col-sm-5
-                  v-container
+                v-col(cols="12").py-4.col-xs-12.col-sm-5
+                  v-container.py-0
                     v-form
                       v-text-field(v-model="cardNumber"
                                     label="Card Number"
@@ -17,9 +17,9 @@
                                     @keyup="identifyCard")
                         v-icon(slot="append" :color="iconColor") {{ appendIcon }}
                 v-col.col-xs-12.col-sm-7
-                  v-container
+                  v-container.py-0
                     v-row(justify="center")
-                      v-col.col-12
+                      v-col.col-12.py-0
                         .grid
                           img(src="./assets/visa.png").card#visa
                           img(src="./assets/mastercard.png").card#mastercard
@@ -82,9 +82,12 @@ export default {
     this.iso = new Isotope( '.grid', {
       itemSelector: '.card',
       masonry: {
-        columnWidth: 15,
+        columnWidth: 25,
       }
     });
+    setTimeout(() => {
+      this.iso.arrange({ filter: '*' })
+    }, 100);
   },
   methods: {
     identifyCard: function() {
