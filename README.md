@@ -1,4 +1,5 @@
 # card-validator
+![](https://github.com/reiallenramos/card-validator/workflows/Github%20Pages/badge.svg)
 
 ## Project setup
 ```
