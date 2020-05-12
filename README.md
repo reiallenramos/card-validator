@@ -1,8 +1,14 @@
-# card-validator
+![demo](src/assets/demo.gif)
+
 ![](https://github.com/reiallenramos/card-validator/workflows/Github%20Pages/badge.svg)
 
-## Project setup
-```
+## Getting started
+```bash
+# Clone this repository
+git clone git@github.com:reiallenramos/card-validator.git my_app
+
+# Install dependencies
+cd my_app
 npm install
 ```
 
@@ -11,15 +17,13 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
+### Linter
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Deploying to Github Pages
+For every successful push to the `master` branch, Github Actions automagically builds a `dist/` folder with static files and pushes to the `gh-pages` branch.
+
+
+<a href="https://www.buymeacoffee.com/reiallenramos" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
