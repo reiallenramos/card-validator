@@ -14,8 +14,7 @@
                                     v-mask="'#### #### #### ####'"
                                     :rules="rules"
                                     outlined
-                                    @keyup="identifyCard"
-                                    browser-autocomplete="new-password")
+                                    @keyup="identifyCard")
                         v-icon(slot="append" :color="iconColor") {{ appendIcon }}
                 v-col.col-xs-12.col-sm-7
                   v-container.py-0
