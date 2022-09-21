@@ -13,7 +13,7 @@
     "isotope-layout": "^3.0.6",
     "v-mask": "^2.1.0",
     "vue": "^2.6.11",
-    "vuetify": "^2.2.27"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
